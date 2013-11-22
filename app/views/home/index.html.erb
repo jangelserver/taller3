@@ -1,0 +1,12 @@
+<% if member_signed_in? %>
+
+<h3>Registro exitoso</h3>
+<%= link_to'Sing Out', destroy_member_session_path, :method => :delete %>
+
+<% else %>
+
+<h1>Bienvenido a la pagina Web de Ruby</h1>
+<%= link_to"Sign In", new_member_session_path, :method => :get %>
+<%= link_to"Sing Up", new_member_registration_path, :method => :get %>
+
+<% end %>
